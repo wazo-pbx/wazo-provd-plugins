@@ -855,6 +855,78 @@ def build_05_20_0001(path):
     check_call(['rsync', '-rlp', '--exclude', '.*', '05.20.0001/', path])
 
 
+@target('06.70.0202', 'wazo-snom-dect-06.70.0202')
+def build_06_70_0202(path):
+    MODELS = [
+        'M400',
+        'M900',
+    ]
+    check_call(
+        [
+            'rsync',
+            '-rlp',
+            '--exclude',
+            '.*',
+            '--include',
+            '/templates/base.tpl',
+            '--include',
+            '/templates/M400.tpl',
+            '--include',
+            '/templates/M900.tpl',
+            '--exclude',
+            '/templates/*.tpl',
+            '--exclude',
+            '*.btpl',
+            'common_dect/',
+            path,
+        ]
+    )
+
+    for model in MODELS:
+        # generate snom<model>-firmware.xml.tpl from snom-model-firmware.xml.tpl.btpl
+        model_tpl = os.path.join(
+            path, 'templates', 'common', f'snom{model}-firmware.xml.tpl'
+        )
+        sed_script = f's/#FW_FILENAME#/{model}_v0670_b0202.fwu/'
+        with open(model_tpl, 'wb') as f:
+            check_call(
+                [
+                    'sed',
+                    sed_script,
+                    'common_dect/templates/common/snom-model-firmware-v670.xml.tpl.btpl',
+                ],
+                stdout=f,
+            )
+
+        # generate snom<model>.htm.tpl from snom-model.htm.tpl.mtpl
+        model_tpl = os.path.join(path, 'templates', 'common', f'snom{model}.htm.tpl')
+        sed_script = f's/#MODEL#/{model}/'
+        with open(model_tpl, 'wb') as f:
+            check_call(
+                [
+                    'sed',
+                    sed_script,
+                    'common_dect/templates/common/snom-model.htm.tpl.btpl',
+                ],
+                stdout=f,
+            )
+
+        # generate snom<model>.xml.tpl from snom-model.xml.mtpl
+        model_tpl = os.path.join(path, 'templates', 'common', f'snom{model}.xml.tpl')
+        sed_script = f's/#MODEL#/{model}/'
+        with open(model_tpl, 'wb') as f:
+            check_call(
+                [
+                    'sed',
+                    sed_script,
+                    'common_dect/templates/common/snom-model.xml.tpl.btpl',
+                ],
+                stdout=f,
+            )
+
+    check_call(['rsync', '-rlp', '--exclude', '.*', '06.70.0202/', path])
+
+
 @target('10.1.101.11', 'wazo-snom-10.1.101.11')
 def build_10_1_101_11(path):
     MODELS = [

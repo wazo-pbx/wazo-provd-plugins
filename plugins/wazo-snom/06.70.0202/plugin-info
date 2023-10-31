@@ -1,0 +1,27 @@
+{
+    "version": "0.1.0",
+    "description": "Plugin for Snom M900 and M400 in version V670B202. Supported Repeater M6, M25, M30, M65, M70, M80, M85, M90",
+    "description_fr": "Greffon pour Snom M900 et M400 en version V6700B202. Supporte Repeteur M6, M25, M30, M65, M70, M80, M85, M90",
+    "capabilities": {
+        "Snom, 400, 06.70.0202": {
+            "protocol": "sip",
+            "type": "dect",
+            "multicell": false,
+            "lines": 20,
+            "switchboard": false,
+            "high_availability": false,
+            "function_keys": 0,
+            "expansion_modules": 0
+        },
+        "Snom, M900, 06.70.0202": {
+            "protocol": "sip",
+            "type": "dect",
+            "multicell": true,
+            "lines": 1000,
+            "switchboard": false,
+            "high_availability": false,
+            "function_keys": 0,
+            "expansion_modules": 0
+        }
+    }
+}
