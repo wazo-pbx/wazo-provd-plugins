@@ -1,4 +1,4 @@
-# Copyright 2013-2024 The Wazo Authors  (see the AUTHORS file)
+# Copyright 2013-2025 The Wazo Authors  (see the AUTHORS file)
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from __future__ import annotations
@@ -57,7 +57,7 @@ if TYPE_CHECKING:
 class BaseFanvilHTTPDeviceInfoExtractor:
     _PATH_REGEX = re.compile(r'\b(?!0{12})([\da-f]{12})\.cfg$')
     _UA_REGEX = re.compile(
-        r'^Fanvil (?P<model>[XVi][0-9]{1,3}[WSGVUCi]?[DV]?[0-9]?(-V2)?( Pro)?) (?P<version>[0-9.]+) (?P<mac>[\da-f]{12})$'  # noqa: E501
+        r'^Fanvil (?P<model>[XVi][0-9]{1,3}[WSGVUCi]?[DV]?[0-9]?(-V[12])?( Pro)?) (?P<version>[0-9.]+) (?P<mac>[\da-f]{12})$'  # noqa: E501
     )
 
     def __init__(self, common_files):
