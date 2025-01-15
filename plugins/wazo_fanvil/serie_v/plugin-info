@@ -1,5 +1,5 @@
 {
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "Plugin for Fanvil V6x series",
     "description_fr": "Greffon pour La serie V6x Fanvil",
     "vendor" : "Fanvil",
@@ -7,7 +7,25 @@
     "vendor.description" : "",
     "vendor.official" : 1,
     "capabilities": {
-        "Fanvil, V62, 2.12.16.17": {
+        "Fanvil, V61G, 2.12.20.3": {
+            "lines": 4,
+            "high_availability": false,
+            "function_keys": 12,
+            "expansion_modules": 0,
+            "switchboard": false,
+            "type": "deskphone",
+            "protocol": "sip"
+        },
+        "Fanvil, V61W, 2.12.20.3": {
+            "lines": 4,
+            "high_availability": false,
+            "function_keys": 12,
+            "expansion_modules": 0,
+            "switchboard": false,
+            "type": "deskphone",
+            "protocol": "sip"
+        },
+        "Fanvil, V62, 2.12.20": {
             "lines": 6,
             "high_availability": false,
             "function_keys": 15,
@@ -16,7 +34,34 @@
             "type": "deskphone",
             "protocol": "sip"
         },
-        "Fanvil, V64, 2.12.21.2": {
+        "Fanvil, V62G, 2.12.20.3": {
+            "lines": 12,
+            "high_availability": false,
+            "function_keys": 21,
+            "expansion_modules": 0,
+            "switchboard": false,
+            "type": "deskphone",
+            "protocol": "sip"
+        },
+        "Fanvil, V62W, 2.12.20.3": {
+            "lines": 12,
+            "high_availability": false,
+            "function_keys": 21,
+            "expansion_modules": 0,
+            "switchboard": false,
+            "type": "deskphone",
+            "protocol": "sip"
+        },
+        "Fanvil, V63, 2.12.20.3": {
+            "lines": 6,
+            "high_availability": false,
+            "function_keys": 21,
+            "expansion_modules": 0,
+            "switchboard": false,
+            "type": "deskphone",
+            "protocol": "sip"
+        },
+        "Fanvil, V64, 2.12.20.3": {
             "lines": 12,
             "high_availability": false,
             "function_keys": 21,
@@ -34,7 +79,7 @@
             "type": "deskphone",
             "protocol": "sip"
         },
-        "Fanvil, V67, 2.6.10.1515": {
+        "Fanvil, V67, 2.6.10.1992": {
             "lines": 20,
             "high_availability": false,
             "function_keys": 116,
