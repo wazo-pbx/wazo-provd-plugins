@@ -178,8 +178,8 @@ COMMON_FILES = {
 
 FUNCTION_KEYS_PER_PAGE = {
     'V67': 29,
-    'V66': 115,
-    'V66-Pro': 115,
+    'V66': 29,
+    'V66-Pro': 29,
     'V65': 9,
     'V64': 7,
     'V63': 7,
