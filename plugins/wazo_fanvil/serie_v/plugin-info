@@ -52,6 +52,15 @@
             "type": "deskphone",
             "protocol": "sip"
         },
+        "Fanvil, V62-Pro, 2.12.20.3": {
+            "lines": 12,
+            "high_availability": false,
+            "function_keys": 21,
+            "expansion_modules": 0,
+            "switchboard": false,
+            "type": "deskphone",
+            "protocol": "sip"
+        },
         "Fanvil, V63, 2.12.20.3": {
             "lines": 6,
             "high_availability": false,
@@ -74,6 +83,24 @@
             "lines": 20,
             "high_availability": false,
             "function_keys": 45,
+            "expansion_modules": 0,
+            "switchboard": false,
+            "type": "deskphone",
+            "protocol": "sip"
+        },
+        "Fanvil, V66, 2.12.18.16": {
+            "lines": 20,
+            "high_availability": false,
+            "function_keys": 116,
+            "expansion_modules": 0,
+            "switchboard": false,
+            "type": "deskphone",
+            "protocol": "sip"
+        },
+        "Fanvil, V66-Pro, 2.12.18.16": {
+            "lines": 20,
+            "high_availability": false,
+            "function_keys": 116,
             "expansion_modules": 0,
             "switchboard": false,
             "type": "deskphone",

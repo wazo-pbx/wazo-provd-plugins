@@ -29,9 +29,12 @@ MODELS = [
     'V62',
     'V62G',
     'V62W',
+    'V62-Pro',
     'V63',
     'V64',
     'V65',
+    'V66',
+    'V66-Pro',
     'V67',
 ]
 
@@ -41,149 +44,149 @@ MODEL_FIRMWARE_MAPPING = {
     'V62': 'v62-fanvil-release-ff01-5944-2.12.20-krnlvUT2024-07-16-04.36.28.z',
     'V62G': 'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
     'V62W': 'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
+    'V62-Pro': 'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
     'V63': 'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
     'V64': 'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
     'V65': 'v65-fanvil-release-5924-2.12.21.1-krnvlT2024-08-28-09.41.46.z',
+    'V66': 'v66pro-fanvil-release-5927-2.12.18.16-krnvlT2024-12-13-19.26.56.z',
+    'V66-Pro': 'v66pro-fanvil-release-5927-2.12.18.16-krnvlT2024-12-13-19.26.56.z',
     'V67': 'v67_fanvil_2.6.10.1992_20241023_full.zip',
 }
 
-# COMMON_FILES = {
-#     'F0V0V6700000.cfg': (
-#         'V67',
-#         'v67_fanvil_2.6.10.1992_20241023_full.zip',
-#         'model-v.tpl',
-#     ),
-#     'fanvil_v67_hw1_1.txt': (
-#         'V67',
-#         'v67_fanvil_2.6.10.1992_20241023_full.zip',
-#         'model-v67.tpl',
-#     ),
-#     'F0V0V61G0000.cfg': (
-#         'V61G',
-#         'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
-#         'model-v6x.tpl',
-#     ),
-#     'fanvil_v61g_hwv1_0.txt': (
-#         'V61G',
-#         'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
-#         'model-v6x.tpl',
-#     ),
-#     'F0V0V61W0000.cfg': (
-#         'V61W',
-#         'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
-#         'model-v6x.tpl',
-#     ),
-#     'fanvil_v61w_hwv1_0.txt': (
-#         'V61W',
-#         'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
-#         'model-v6x.tpl',
-#     ),
-#     'F0V0V6200000.cfg': (
-#         'V62',
-#         'v62-fanvil-release-ff01-5944-2.12.20-krnlvUT2024-07-16-04.36.28.z',
-#         'model-v6x.tpl',
-#     ),
-#     'fanvil_v62_hwv1_0.txt': (
-#         'V62',
-#         'v62-fanvil-release-ff01-5944-2.12.20-krnlvUT2024-07-16-04.36.28.z',
-#         'model-v6x.tpl',
-#     ),
-#     'F0V0V62G0000.cfg': (
-#         'V62G',
-#         'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
-#         'model-v6x.tpl',
-#     ),
-#     'fanvil_v62g_hwv1_0.txt': (
-#         'V62G',
-#         'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
-#         'model-v6x.tpl',
-#     ),
-#     'F0V0V62W0000.cfg': (
-#         'V62W',
-#         'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
-#         'model-v6x.tpl',
-#     ),
-#     'fanvil_v62w_hwv1_0.txt': (
-#         'V62',
-#         'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
-#         'model-v6x.tpl',
-#     ),
-#     'F0V0V6300000.cfg': (
-#         'V63',
-#         'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
-#         'model-v6x.tpl',
-#     ),
-#     'fanvil_v63_hwv1_0.txt': (
-#         'V63',
-#         'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
-#         'model-v6x.tpl',
-#     ),
-#     'F0V0V6400000.cfg': (
-#         'V64',
-#         'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
-#         'model-v6x.tpl',
-#     ),
-#     'fanvil_v64_hwv1_0.txt': (
-#         'V64',
-#         'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
-#         'model-v6x.tpl',
-#     ),
-#     'F0V0V6500000.cfg': (
-#         'V65',
-#         'v65-fanvil-release-5924-2.12.21.1-krnvlT2024-08-28-09.41.46.z',
-#         'model-v6x.tpl',
-#     ),
-#     'fanvil_v65_hwv1_0.txt': (
-#         'V65',
-#         'v65-fanvil-release-5924-2.12.21.1-krnvlT2024-08-28-09.41.46.z',
-#         'model-v65.tpl',
-#     ),
-# }
-
-# Adding specific entries for CFG files
-# exemple : F0V0V6500000.cfg
 COMMON_FILES = {
-    f'F0V0{model}0000.cfg': (
-        model,
-        MODEL_FIRMWARE_MAPPING[model],
-        'model-v6x.tpl' if model != 'V67' else 'model-v.tpl',
-    )
-    for model in MODELS
+    'F0V0V6700000.cfg': (
+        'V67',
+        'v67_fanvil_2.6.10.1992_20241023_full.zip',
+        'model-v.tpl',
+    ),
+    'fanvil_v67_hw1_1.txt': (
+        'V67',
+        'v67_fanvil_2.6.10.1992_20241023_full.zip',
+        'model-v67.tpl',
+    ),
+    'F0V0V61G0000.cfg': (
+        'V61G',
+        'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
+        'model-v6x.tpl',
+    ),
+    'fanvil_v61g_hwv1_0.txt': (
+        'V61G',
+        'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
+        'model-v6x.tpl',
+    ),
+    'F0V0V61W0000.cfg': (
+        'V61W',
+        'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
+        'model-v6x.tpl',
+    ),
+    'fanvil_v61w_hwv1_0.txt': (
+        'V61W',
+        'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
+        'model-v6x.tpl',
+    ),
+    'F0V0V6200000.cfg': (
+        'V62',
+        'v62-fanvil-release-ff01-5944-2.12.20-krnlvUT2024-07-16-04.36.28.z',
+        'model-v6x.tpl',
+    ),
+    'fanvil_v62_hwv1_0.txt': (
+        'V62',
+        'v62-fanvil-release-ff01-5944-2.12.20-krnlvUT2024-07-16-04.36.28.z',
+        'model-v6x.tpl',
+    ),
+    'F0V0V62P00000.cfg': (
+        'V62-Pro',
+        'v62-fanvil-release-ff01-5944-2.12.20-krnlvUT2024-07-16-04.36.28.z',
+        'model-v6x.tpl',
+    ),
+    'fanvil_v62p_hwv1_0.txt': (
+        'V62-Pro',
+        'v62-fanvil-release-ff01-5944-2.12.20-krnlvUT2024-07-16-04.36.28.z',
+        'model-v6x.tpl',
+    ),
+    'F0V0V62G0000.cfg': (
+        'V62G',
+        'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
+        'model-v6x.tpl',
+    ),
+    'fanvil_v62g_hwv1_0.txt': (
+        'V62G',
+        'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
+        'model-v6x.tpl',
+    ),
+    'F0V0V62W0000.cfg': (
+        'V62W',
+        'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
+        'model-v6x.tpl',
+    ),
+    'fanvil_v62w_hwv1_0.txt': (
+        'V62',
+        'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
+        'model-v6x.tpl',
+    ),
+    'F0V0V6300000.cfg': (
+        'V63',
+        'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
+        'model-v6x.tpl',
+    ),
+    'fanvil_v63_hwv1_0.txt': (
+        'V63',
+        'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
+        'model-v6x.tpl',
+    ),
+    'F0V0V6400000.cfg': (
+        'V64',
+        'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
+        'model-v6x.tpl',
+    ),
+    'fanvil_v64_hwv1_0.txt': (
+        'V64',
+        'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
+        'model-v6x.tpl',
+    ),
+    'F0V0V6500000.cfg': (
+        'V65',
+        'v65-fanvil-release-5924-2.12.21.1-krnvlT2024-08-28-09.41.46.z',
+        'model-v6x.tpl',
+    ),
+    'fanvil_v65_hwv1_0.txt': (
+        'V65',
+        'v65-fanvil-release-5924-2.12.21.1-krnvlT2024-08-28-09.41.46.z',
+        'model-v65.tpl',
+    ),
+    'F0V0V6600000.cfg': (
+        'V66',
+        'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
+        'model-v6x.tpl',
+    ),
+    'fanvil_v66_hwv1_0.txt': (
+        'V66',
+        'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
+        'model-v6x.tpl',
+    ),
+    'F0V0V66P00000.cfg': (
+        'V66-Pro',
+        'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
+        'model-v6x.tpl',
+    ),
+    'fanvil_v66p_hwv1_0.txt': (
+        'V66-Pro',
+        'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
+        'model-v6x.tpl',
+    ),
 }
-
-# Adding specific entries for TXT files
-# exemple : fanvil_v65_hwv1_0.txt
-for model in MODELS:
-    COMMON_FILES[f'fanvil_{model.lower()}_hwv1_0.txt'] = (
-        model,
-        MODEL_FIRMWARE_MAPPING[model],
-        'model-v6x.tpl' if model != 'V67' else 'model-v67.tpl',
-    )
-
-# Adding specific entries for V67
-COMMON_FILES.update(
-    {
-        'F0V0V6700000.cfg': (
-            'V67',
-            'v67_fanvil_2.6.10.1992_20241023_full.zip',
-            'model-v.tpl',
-        ),
-        'fanvil_v67_hw1_1.txt': (
-            'V67',
-            'v67_fanvil_2.6.10.1992_20241023_full.zip',
-            'model-v67.tpl',
-        ),
-    }
-)
 
 FUNCTION_KEYS_PER_PAGE = {
     'V67': 29,
+    'V66': 115,
+    'V66-Pro': 115,
     'V65': 9,
     'V64': 7,
     'V63': 7,
     'V62': 5,
     'V62G': 7,
     'V62W': 7,
+    'V62-Pro': 7,
     'V61G': 4,
     'V61W': 4,
 }
