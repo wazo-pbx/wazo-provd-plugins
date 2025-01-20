@@ -64,7 +64,7 @@ COMMON_FILES = {
         'v67_fanvil_2.6.10.1992_20241023_full.zip',
         'model-v67.tpl',
     ),
-    'F0V0V61G0000.cfg': (
+    'F0VV61G00000.cfg': (
         'V61G',
         'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
         'model-v6x.tpl',
@@ -74,7 +74,7 @@ COMMON_FILES = {
         'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
         'model-v6x.tpl',
     ),
-    'F0V0V61W0000.cfg': (
+    'F0VV61W00000.cfg': (
         'V61W',
         'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
         'model-v6x.tpl',
@@ -84,7 +84,7 @@ COMMON_FILES = {
         'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
         'model-v6x.tpl',
     ),
-    'F0V0V6200000.cfg': (
+    'F0VV6200000.cfg': (
         'V62',
         'v62-fanvil-release-ff01-5944-2.12.20-krnlvUT2024-07-16-04.36.28.z',
         'model-v6x.tpl',
@@ -94,17 +94,17 @@ COMMON_FILES = {
         'v62-fanvil-release-ff01-5944-2.12.20-krnlvUT2024-07-16-04.36.28.z',
         'model-v6x.tpl',
     ),
-    'F0V0V62P00000.cfg': (
+    'F0V0V6210000.cfg': (
         'V62-Pro',
         'v62-fanvil-release-ff01-5944-2.12.20-krnlvUT2024-07-16-04.36.28.z',
         'model-v6x.tpl',
     ),
-    'fanvil_v62p_hwv1_0.txt': (
+    'fanvil_v62_pro_hwv1_0.txt': (
         'V62-Pro',
         'v62-fanvil-release-ff01-5944-2.12.20-krnlvUT2024-07-16-04.36.28.z',
         'model-v6x.tpl',
     ),
-    'F0V0V62G0000.cfg': (
+    'F0VV62G00000.cfg': (
         'V62G',
         'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
         'model-v6x.tpl',
@@ -114,7 +114,7 @@ COMMON_FILES = {
         'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
         'model-v6x.tpl',
     ),
-    'F0V0V62W0000.cfg': (
+    'F0VV62W00000.cfg': (
         'V62W',
         'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
         'model-v6x.tpl',
@@ -164,12 +164,12 @@ COMMON_FILES = {
         'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
         'model-v6x.tpl',
     ),
-    'F0V0V66P00000.cfg': (
+    'F0V0V66100000.cfg': (
         'V66-Pro',
         'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
         'model-v6x.tpl',
     ),
-    'fanvil_v66p_hwv1_0.txt': (
+    'fanvil_v66_pro_hwv1_0.txt': (
         'V66-Pro',
         'v6x-unified-release-a006-2.12.20.3-krvnlUT2024-12-12-16.09.35.z',
         'model-v6x.tpl',
