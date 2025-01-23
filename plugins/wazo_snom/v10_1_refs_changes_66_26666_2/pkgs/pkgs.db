@@ -1,0 +1,26 @@
+[pkg_862-fw]
+description: Firmware for Snom D862
+description_fr: Firmware pour Snom D862
+version: 8.10.1.66-26666-2
+files: 862-fw
+install: snom-fw
+
+[pkg_865-fw]
+description: Firmware for Snom D865
+description_fr: Firmware pour Snom D865
+version: 8.10.1.66-26666-2
+files: 865-fw
+install: snom-fw
+
+[install_snom-fw]
+a-b: cp $FILE1 firmware/
+
+[file_862-fw]
+url: https://downloads.snom.com/fw/10.1.refs-changes-66-26666-2/bin/snomD862-8.10.1.66-26666-2-r.swu
+size: 132200448
+sha1sum: e2a162b03c57f60f7d5e86297da3c7df76081f32
+
+[file_865-fw]
+url: https://downloads.snom.com/fw/10.1.refs-changes-66-26666-2/bin/snomD865-8.10.1.66-26666-2-r.swu
+size: 133724160
+sha1sum: d6b83a66b5dad3e03ede6b0cc43489dc6bd63870

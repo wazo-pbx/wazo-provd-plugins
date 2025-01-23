@@ -308,12 +308,7 @@ class BaseSnomPlugin(StandardPlugin):
 
     def _add_xivo_phonebook_url(self, raw_config):
         for model in self._MODELS:
-            if model.startswith("D8"):
-                plugins.add_xivo_phonebook_url(
-                    raw_config, 'snom', entry_point='lookup', qs_suffix='term=#'
-                )
-            else:
-                plugins.add_xivo_phonebook_url(raw_config, 'snom')
+            plugins.add_xivo_phonebook_url(raw_config, 'snom')
 
     def _add_server_url(self, raw_config):
         if raw_config.get('http_base_url'):

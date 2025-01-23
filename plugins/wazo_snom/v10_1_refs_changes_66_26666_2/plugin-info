@@ -1,0 +1,25 @@
+{
+    "version": "1.0.2",
+    "description": "Plugin for Snom D81x in version 8.10.1.refs-changes-66-26666-2",
+    "description_fr": "Greffon pour Snom D81x en version 8.10.1.refs-changes-66-26666-2",
+    "capabilities": {
+        "Snom, D862, 8.10.1.refs-changes-66-26666-2": {
+            "lines": 12,
+            "high_availability": true,
+            "function_keys": 28,
+            "expansion_modules": 1,
+            "switchboard": false,
+            "type": "deskphone",
+            "protocol": "sip"
+        },
+        "Snom, D865, 8.10.1.refs-changes-66-26666-2": {
+            "lines": 12,
+            "high_availability": true,
+            "function_keys": 36,
+            "expansion_modules": 1,
+            "switchboard": false,
+            "type": "deskphone",
+            "protocol": "sip"
+        }
+    }
+}
