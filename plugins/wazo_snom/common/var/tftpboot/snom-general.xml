@@ -22,6 +22,10 @@
 
     <transfer_on_hangup perm="R">off</transfer_on_hangup>
     <transfer_on_hangup_non_pots perm="R">off</transfer_on_hangup_non_pots>
+    <quick_transfer perm="R">attended</quick_transfer>
+    <transfer_dialing_on_other perm="R">attended</transfer_dialing_on_other>
+
+    <mute_is_dnd_in_idle perm="R">on</mute_is_dnd_in_idle>
 
     <display_method perm="R">display_name_number</display_method>
     <pnp_config perm="R">off</pnp_config>

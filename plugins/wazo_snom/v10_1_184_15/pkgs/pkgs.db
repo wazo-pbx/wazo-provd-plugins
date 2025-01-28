@@ -1,3 +1,80 @@
+[pkg_140-fw]
+description: Firmware for Snom D140
+description_fr: Firmware pour Snom D140
+version: 10.1.184.15
+files: 140-fw
+install: snom-fw
+
+[pkg_150-fw]
+description: Firmware for Snom D150
+description_fr: Firmware pour Snom D150
+version: 10.1.184.15
+files: 150-fw
+install: snom-fw
+
+[pkg_315-fw]
+description: Firmware for Snom D315
+description_fr: Firmware pour Snom D315
+version: 10.1.184.15
+files: 315-fw 315-ramdisk
+install: snom-fw-ramdisk
+
+[pkg_335-fw]
+description: Firmware for Snom D335
+description_fr: Firmware pour Snom D335
+version: 10.1.184.15
+files: 335-fw 335-ramdisk
+install: snom-fw-ramdisk
+
+[pkg_385-fw]
+description: Firmware for Snom D385
+description_fr: Firmware pour Snom D385
+version: 10.1.184.15
+files: 385-fw 385-ramdisk
+install: snom-fw-ramdisk
+
+[pkg_712-fw]
+description: Firmware for Snom D712
+description_fr: Firmware pour Snom D712
+version: 10.1.184.15
+files: 712-fw 712-ramdisk
+install: snom-fw-ramdisk
+
+[pkg_713-fw]
+description: Firmware for Snom D713
+description_fr: Firmware pour Snom D713
+version: 10.1.184.15
+files: 713-fw
+install: snom-fw
+
+[pkg_715-fw]
+description: Firmware for Snom D715
+description_fr: Firmware pour Snom D715
+version: 10.1.184.15
+files: 715-fw 715-ramdisk
+install: snom-fw-ramdisk
+
+[pkg_717-fw]
+description: Firmware for Snom D717
+description_fr: Firmware pour Snom D717
+version: 10.1.184.15
+files: 717-fw 717-ramdisk
+install: snom-fw-ramdisk
+
+[pkg_735-fw]
+description: Firmware for Snom D735
+description_fr: Firmware pour Snom D735
+version: 10.1.184.15
+files: 735-fw 735-ramdisk
+install: snom-fw-ramdisk
+
+[pkg_785-fw]
+description: Firmware for Snom D785
+description_fr: Firmware pour Snom D785
+version: 10.1.184.15
+files: 785-fw 785-ramdisk
+install: snom-fw-ramdisk
+
 [pkg_812-fw]
 description: Firmware for Snom D812
 description_fr: Firmware pour Snom D812
@@ -12,8 +89,134 @@ version: 10.1.184.15
 files: 815-fw
 install: snom-fw
 
+[pkg_862-fw]
+description: Firmware for Snom D862
+description_fr: Firmware pour Snom D862
+version: 10.1.184.15
+files: 862-fw
+install: snom-fw
+
+[pkg_865-fw]
+description: Firmware for Snom D865
+description_fr: Firmware pour Snom D865
+version: 10.1.184.15
+files: 865-fw
+install: snom-fw
+
+[pkg_uxmd7c-fw]
+description: Firmware for Snom USB Extension Module UXM D7C
+description_fr: Micrologiciel pour module d'extension USB Snom UXM D7C
+version: 1.5.3
+files: uxmd7c-fw
+install: snom-fw
+
+[pkg_uxmd8c-fw]
+description: Firmware for Snom USB Extension Module UXM D8C
+description_fr: Micrologiciel pour module d'extension USB Snom UXM D8C
+version: 1.5.3
+files: uxmd8c-fw
+install: snom-fw
+
 [install_snom-fw]
 a-b: cp $FILE1 firmware/
+
+[install_snom-fw-ramdisk]
+a-b: cp $FILE1 $FILE2 firmware/
+
+[file_140-fw]
+url: https://downloads.snom.com/fw/10.1.184.15/bin/snomD140-10.1.184.15-SIP-r.bin
+size: 43434096
+sha1sum: 558241e8d60675c2f082d4cae9168f47efb5410d
+
+[file_150-fw]
+url: https://downloads.snom.com/fw/10.1.184.15/bin/snomD150-10.1.184.15-SIP-r.bin
+size: 43430736
+sha1sum: d8d89a79fbf8d076436a5da53eda4cf1ec1a992b
+
+[file_315-fw]
+url: https://downloads.snom.com/fw/10.1.184.15/bin/snomD315-10.1.184.15-SIP-r.bin
+size: 34459040
+sha1sum: 0a124f676cf90ee10fbf614dfe60462932e037a4
+
+[file_315-ramdisk]
+url: https://downloads.snom.com/fw/update/snomD315-ramdisk-chained-update-r.bin
+size: 10576
+sha1sum: bfff3a81b0aeef2cb9bc387c62a04a4614b09614
+
+[file_335-fw]
+url: https://downloads.snom.com/fw/10.1.184.15/bin/snomD335-10.1.184.15-SIP-r.bin
+size: 41217600
+sha1sum: 9d4aafd2f8669938b92cb6d805a6726b8fa345e8
+
+[file_335-ramdisk]
+url: https://downloads.snom.com/fw/update/snomD335-ramdisk-chained-update-r.bin
+size: 10576
+sha1sum: 05bd4cc52704b045499a483ca5c4c0b9e53b225f
+
+[file_385-fw]
+url: https://downloads.snom.com/fw/10.1.184.15/bin/snomD385-10.1.184.15-SIP-r.bin
+size: 41603648
+sha1sum: cd9bd589bad6428cfeced655020f870d1f618d38
+
+[file_385-ramdisk]
+url: https://downloads.snom.com/fw/update/snomD385-ramdisk-chained-update-r.bin
+size: 10576
+sha1sum: 83a71eb47053a92493e12efca50f99931e97cd94
+
+[file_712-fw]
+url: https://downloads.snom.com/fw/10.1.184.15/bin/snomD712-10.1.184.15-SIP-r.bin
+size: 28702000
+sha1sum: ca4c5e79f7061203f810f05f907cb8e84e22d112
+
+[file_712-ramdisk]
+url: https://downloads.snom.com/fw/update/snomD712-ramdisk-chained-update-r.bin
+size: 10576
+sha1sum: 0221437f0d9d49b33cb89ff068e30eea035c17a6
+
+[file_713-fw]
+url: https://downloads.snom.com/fw/10.1.184.15/bin/snomD713-10.1.184.15-SIP-r.bin
+size: 41387888
+sha1sum: ced85574ed0c7c0bb988504ace5dd7c4ef0bc485
+
+[file_715-fw]
+url: https://downloads.snom.com/fw/10.1.184.15/bin/snom715-10.1.184.15-SIP-r.bin
+size: 32292752
+sha1sum: daaed8864938ea49cd0a6c2e5b6432201f40270d
+
+[file_715-ramdisk]
+url: https://downloads.snom.com/fw/update/snom715-ramdisk-chained-update-r.bin
+size: 10576
+sha1sum: d83c4ca90e8c4eef7846e57d5ab45e0b77a51906
+
+[file_717-fw]
+url: https://downloads.snom.com/fw/10.1.184.15/bin/snomD717-10.1.184.15-SIP-r.bin
+size: 43473472
+sha1sum: 46e005b0e692941c8bee3ebb064a9dbd68604ca4
+
+[file_717-ramdisk]
+url: https://downloads.snom.com/fw/update/snomD717-ramdisk-chained-update-r.bin
+size: 10576
+sha1sum: f4a38901837a52b14b9c3a21159708e2af346fca
+
+[file_735-fw]
+url: https://downloads.snom.com/fw/10.1.184.15/bin/snomD735-10.1.184.15-SIP-r.bin
+size: 44943472
+sha1sum: 96c1766b873907c3b476b8742cab92cd3f91919c
+
+[file_735-ramdisk]
+url: https://downloads.snom.com/fw/update/snomD735-ramdisk-chained-update-r.bin
+size: 10576
+sha1sum: 16e43edc718484e0078cfa4fb5f04a5f7b0280e3
+
+[file_785-fw]
+url: https://downloads.snom.com/fw/10.1.184.15/bin/snomD785-10.1.184.15-SIP-r.bin
+size: 43003328
+sha1sum: 4b95c7a2adbe2fe1988dacc9de26cc81c27fcf75
+
+[file_785-ramdisk]
+url: https://downloads.snom.com/fw/update/snomD785-ramdisk-chained-update-r.bin
+size: 10576
+sha1sum: 6714e446d539e733d5affeb3825fd4e894570fcf
 
 [file_812-fw]
 url: https://downloads.snom.com/fw/10.1.184.15/bin/snomD812-10.1.184.15-SIP-r.swu
@@ -24,3 +227,23 @@ sha1sum: fe236deef94c7d3090e9cb18131db01d60763789
 url: https://downloads.snom.com/fw/10.1.184.15/bin/snomD815-10.1.184.15-SIP-r.swu
 size: 81024000
 sha1sum: 9cad6d3dbed6bdc97ad653a85f35fb164bc194d8
+
+[file_862-fw]
+url: https://downloads.snom.com/fw/10.1.184.15/bin/snomD862-10.1.184.15-SIP-r.swu
+size: 140179456
+sha1sum: bab510b7aa818dc3cd367911bcd96667708b12c3
+
+[file_865-fw]
+url: https://downloads.snom.com/fw/10.1.184.15/bin/snomD865-10.1.184.15-SIP-r.swu
+size: 140179456
+sha1sum: 84e011da457e0cf1cd4d40a676249d8e85529685
+
+[file_uxmd7c-fw]
+url: https://downloads.snom.com/fw/d7c/snomD7C-1.5.3-r.bin
+size: 37784323
+sha1sum:6c6825751131b87a1c1fbc69da3e1ac307a1efc7
+
+[file_uxmd8c-fw]
+url: https://downloads.snom.com/fw/d8c/snomD8C-1.5.3-r.bin
+size: 67149059
+sha1sum:538a6937271313c0dba1995551c17f5070de17d6

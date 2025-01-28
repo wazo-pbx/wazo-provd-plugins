@@ -19,8 +19,21 @@ common_globals: CommonGlobalsDict = {}  # type: ignore[typeddict-item]
 execfile_('common.py', common_globals)  # type: ignore[name-defined]
 
 MODELS = [
+    'D140',
+    'D150',
+    'D315',
+    'D335',
+    'D385',
+    'D712',
+    'D713',
+    '715',
+    'D717',
+    'D735',
+    'D785',
     'D812',
     'D815',
+    'D862',
+    'D865',
 ]
 VERSION = '10.1.184.15'
 

@@ -4,15 +4,13 @@
     {% if vlan_enabled -%}
     <vlan_id perm="R">{{ vlan_id }}</vlan_id>
     <vlan_qos perm="R">{{ vlan_priority|d('0') }}</vlan_qos>
-    {% else -%}
-    <vlan_id perm="R"></vlan_id>
-    <vlan_qos perm="R"></vlan_qos>
+    <vlan_pc_id perm="R">{{ vlan_pc_port_id|d('0') }}</vlan_pc_id>
     {% endif -%}
 
     <codec_tos perm="R">184</codec_tos>
     <signaling_tos perm="R">184</signaling_tos>
 
-    <setting_server perm="RW">{{ XX_server_url }}</setting_server>
+    <setting_server perm="RW">{{ XX_server_url }}/</setting_server>
 
     {% if user_username -%}
     <webserver_user_name perm="R">{{ user_username|e }}</webserver_user_name>
@@ -33,14 +31,12 @@
 
     {% if ntp_enabled -%}
     <ntp_server perm="R">{{ ntp_ip }}</ntp_server>
-    {% else -%}
-    <ntp_server perm="R"></ntp_server>
     {% endif -%}
 
     {% for line_no, line in sip_lines.items() %}
     <user_active idx="{{ line_no }}" perm="R">on</user_active>
     <user_idle_text idx="{{ line_no }}" perm="R">{{ line['display_name']|e }}</user_idle_text>
-    <user_idle_number idx="{{ line_no }}" perm="R">{{ line['number'] }}</user_idle_text>
+    <user_idle_number idx="{{ line_no }}" perm="R">{{ line['number'] }}</user_idle_number>
     <user_host idx="{{ line_no }}" perm="R">{{ line['proxy_ip'] }}</user_host>
     <user_outbound idx="{{ line_no }}" perm="R">{{ line['proxy_ip'] }}:{{ line['proxy_port'] }};transport={{ XX_sip_transport }}</user_outbound>
     {% if XX_sip_transport == 'tls' and line['number'] != 'autoprov' -%}
@@ -85,9 +81,9 @@
 
     {% if XX_xivo_phonebook_url -%}
     <dkey_directory perm="R">url {{ XX_xivo_phonebook_url|e }}</dkey_directory>
-    {% block gui_fkey %}
-    {% endblock %}
     {% endif -%}
+
+    {% block gui_fkey %}{% endblock %}
 
     {% if XX_lang -%}
     <language perm="R">{{ XX_lang[0] }}</language>
@@ -98,10 +94,9 @@
     {{ XX_timezone }}
 
     <!-- hide the "identity not registered" msg when Wazo HA is enabled -->
-    <status_msgs_that_are_blocked perm="R">PhoneHasVoiceMessages PhoneHasTextMessages{{ XX_msgs_blocked }}</status_msgs_that_are_blocked>
+    <status_msgs_that_are_blocked perm="R">{{ XX_msgs_blocked }}</status_msgs_that_are_blocked>
 
     <call_waiting perm="R">{{ 'off' if XX_options['switchboard'] else 'on' }}</call_waiting>
-    <quick_transfer perm="R">attended</quick_transfer>
 
     {% block settings_suffix %}{% endblock %}
   </phone-settings>

@@ -3,7 +3,6 @@
 
 from __future__ import annotations
 
-import glob
 import logging
 import os.path
 import re
@@ -141,10 +140,10 @@ class BaseSnomPlugin(StandardPlugin):
         'de_DE': ('Deutsch', 'GER'),
         'en_US': ('English', 'USA'),
         'es_ES': ('Espanol', 'ESP'),
-        'fr_FR': ('Francais', 'FRA'),
-        'fr_CA': ('Francais', 'USA'),
+        'fr_FR': ('Français', 'FRA'),
+        'fr_CA': ('Français', 'USA'),
         'it_IT': ('Italiano', 'ITA'),
-        'nl_NL': ('Dutch', 'NLD'),
+        'nl_NL': ('Nederlands', 'NLD'),
     }
     _SIP_DTMF_MODE = {
         'RTP-in-band': 'off',
@@ -185,16 +184,6 @@ class BaseSnomPlugin(StandardPlugin):
 
     http_dev_info_extractor = BaseSnomHTTPDeviceInfoExtractor()
 
-    def _add_uxm_firmware(self, raw_config):
-        f = glob.glob(
-            os.path.join(self._tftpboot_dir, 'firmware/snomD7C-*.bin')
-        ) + glob.glob(os.path.join(self._tftpboot_dir, 'firmware/snomUXM-*.bin'))
-        if f:
-            if re.match(r"^.*\/snomUXM-.*.bin$", max(f, key=os.path.getmtime)):
-                raw_config['XX_uxm_firmware'] = 'uxm'
-            if re.match(r"^.*\/snomD7C-.*.bin$", max(f, key=os.path.getmtime)):
-                raw_config['XX_uxm_firmware'] = 'uxmc'
-
     def _common_templates(self):
         yield 'common/gui_lang.xml.tpl', 'gui_lang.xml'
         yield 'common/web_lang.xml.tpl', 'web_lang.xml'
@@ -207,7 +196,6 @@ class BaseSnomPlugin(StandardPlugin):
                 yield tpl_format % model, file_format % model
 
     def configure_common(self, raw_config):
-        self._add_uxm_firmware(raw_config)
         self._add_server_url(raw_config)
         for tpl_filename, filename in self._common_templates():
             tpl = self._tpl_helper.get_template(tpl_filename)
@@ -306,14 +294,13 @@ class BaseSnomPlugin(StandardPlugin):
                 msgs_blocked += f' Identity{backup_line_no:02d}IsNotRegistered'
         raw_config['XX_msgs_blocked'] = msgs_blocked
 
-    def _add_xivo_phonebook_url(self, raw_config):
-        for model in self._MODELS:
-            if model.startswith("D8"):
-                plugins.add_xivo_phonebook_url(
-                    raw_config, 'snom', entry_point='lookup', qs_suffix='term=#'
-                )
-            else:
-                plugins.add_xivo_phonebook_url(raw_config, 'snom')
+    def _add_xivo_phonebook_url(self, raw_config, model):
+        if model.startswith("D86"):
+            plugins.add_xivo_phonebook_url(
+                raw_config, 'snom', entry_point='lookup', qs_suffix='term=#'
+            )
+        else:
+            plugins.add_xivo_phonebook_url(raw_config, 'snom', entry_point='input')
 
     def _add_server_url(self, raw_config):
         if raw_config.get('http_base_url'):
@@ -366,7 +353,7 @@ class BaseSnomPlugin(StandardPlugin):
         self._add_user_dtmf_info(raw_config)
         self._add_sip_transport(raw_config)
         self._add_msgs_blocked(raw_config)
-        self._add_xivo_phonebook_url(raw_config)
+        self._add_xivo_phonebook_url(raw_config, model)
         self._add_server_url(raw_config)
         raw_config['XX_dict'] = self._gen_xx_dict(raw_config)
         raw_config['XX_options'] = device.get('options', {})
